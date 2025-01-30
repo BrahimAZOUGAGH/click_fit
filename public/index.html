@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Fit - Your Fitness Journey Starts Here</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeIn" href="#">
+                Click Fit
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Workouts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nutrition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-2 mb-4 animate__animated animate__fadeInDown hero-title">Transform Your Life</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp hero-subtitle">Join our community and achieve your fitness goals
+            </p>
+            <button class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Get Started</button>
+        </div>
+    </section>
+
+
+    <!-- Upload Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Share Your Progress</h2>
+            <p id="ajax-content" class="mb-4 text-center"></p>
+            <div id="upload-area" class="mx-auto" style="max-width: 600px;">
+                <h4>Drag & Drop Images Here</h4>
+                <p class="text-muted">or click to select files</p>
+            </div>
+            <input type="file" id="file-input" class="d-none" accept="image/*" multiple>
+            <div id="preview" class="row mt-4 g-3"></div>
+        </div>
+    </section>
+
+    <!-- Fact of the Day -->
+    <div class="container">
+        <div class="fact-of-day floating-animation animate__animated animate__fadeIn">
+            <h3>Fact of the Day</h3>
+            <p id="fact-content">Loading interesting fact...</p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/images/custom_workout_plans.jpeg" class="card-img-top" alt="Workout Plans">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Workout Plans</h5>
+                            <p class="card-text">Personalized training programs designed for your goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/images/nutrition_guidance.jpeg" class="card-img-top" alt="Nutrition Guide">
+                        <div class="card-body">
+                            <h5 class="card-title">Nutrition Guidance</h5>
+                            <p class="card-text">Expert advice on maintaining a balanced diet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/images/community_support.jpeg" class="card-img-top" alt="Community">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Support</h5>
+                            <p class="card-text">Connect with like-minded fitness enthusiasts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Us</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center stats-card animate__animated" data-animation="animate__fadeInUp">
+                        <div class="stats-icon mb-3">
+                            <i class="bi bi-people-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="counter mb-2">5000+</h3>
+                        <p class="text-muted">Happy Members</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center stats-card animate__animated" data-animation="animate__fadeInUp" data-delay="200">
+                        <div class="stats-icon mb-3">
+                            <i class="bi bi-trophy-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="counter mb-2">150+</h3>
+                        <p class="text-muted">Expert Trainers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center stats-card animate__animated" data-animation="animate__fadeInUp" data-delay="400">
+                        <div class="stats-icon mb-3">
+                            <i class="bi bi-calendar-check-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="counter mb-2">500+</h3>
+                        <p class="text-muted">Weekly Classes</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center stats-card animate__animated" data-animation="animate__fadeInUp" data-delay="600">
+                        <div class="stats-icon mb-3">
+                            <i class="bi bi-star-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="counter mb-2">98%</h3>
+                        <p class="text-muted">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="mb-4">Click Fit</h3>
+                    <p class="mb-4">Your ultimate destination for fitness transformation. Join our community and start your journey to a healthier lifestyle today.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3 fs-5">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-light me-3 fs-5">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-light me-3 fs-5">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-light fs-5">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Classes</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Trainers</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Crossfit</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Yoga</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Personal Training</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Nutrition</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Group Classes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            123 Fitness Street, Gym City, SP 12345
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-telephone me-2"></i>
+                            (123) 456-7890
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-envelope me-2"></i>
+                            info@clickfit.com
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-clock me-2"></i>
+                            Mon-Fri: 6:00 AM - 10:00 PM<br>
+                            Sat-Sun: 8:00 AM - 8:00 PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="border-top pt-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h5 class="mb-3 mb-md-0">Subscribe to Our Newsletter</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="d-flex">
+                                    <input type="email" class="form-control me-2 w-75" placeholder="Enter your email">
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="border-top pt-4">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start">
+                                <p class="mb-0">&copy; 2025 Click Fit. All rights reserved.</p>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                                <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                                <a href="#" class="text-light text-decoration-none">Cookie Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
